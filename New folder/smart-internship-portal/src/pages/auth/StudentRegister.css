@@ -1,0 +1,568 @@
+/* StudentRegister.css */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+
+/* =========================
+      PAGE BACKGROUND
+========================= */
+
+.register-page{
+
+    min-height:100vh;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    padding:30px;
+
+
+    background:
+
+    linear-gradient(
+        rgba(15,23,42,0.55),
+        rgba(30,64,175,0.55)
+    ),
+
+    url("/internship-bg.jpg");
+
+
+    background-size:cover;
+
+    background-position:center;
+
+}
+
+
+/* =========================
+      MAIN CONTAINER
+========================= */
+
+
+.register-container{
+
+    width: 950px;
+    max-width: 92%;
+
+    display:flex;
+
+    overflow:hidden;
+
+    border-radius:25px;
+
+
+    box-shadow:
+
+    0 20px 50px rgba(0,0,0,0.35);
+
+
+    border:1px solid rgba(255,255,255,0.3);
+
+}
+
+
+
+/* =========================
+        LEFT PANEL
+========================= */
+
+
+.left-panel{
+
+    width:45%;
+
+    padding: 35px;
+
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    align-items:center;
+
+
+    text-align:center;
+
+
+    color:white;
+
+
+    background:
+
+    linear-gradient(
+        135deg,
+        #0F172A,
+        #1E40AF
+    );
+
+}
+
+
+
+.left-panel h1{
+
+    font-size:36px;
+
+    font-weight:700;
+
+    margin-bottom:20px;
+
+}
+
+
+
+.left-panel p{
+
+    color:#E2E8F0;
+
+    font-size:15px;
+
+    line-height:1.8;
+
+}
+
+
+
+.student-img{
+
+    width:300px;
+
+    margin-top:30px;
+
+
+    animation:float 3s infinite ease-in-out;
+
+}
+
+
+
+@keyframes float{
+
+    0%{
+
+        transform:translateY(0);
+
+    }
+
+    50%{
+
+        transform:translateY(-15px);
+
+    }
+
+    100%{
+
+        transform:translateY(0);
+
+    }
+
+}
+
+
+/* =========================
+        RIGHT PANEL
+   LIGHT BLUE GLASS
+========================= */
+
+
+.register-card{
+
+    width:55%;
+
+    padding: 30px 35px;
+
+
+    background:
+
+    rgba(219,234,254,0.75);
+
+
+    backdrop-filter:blur(20px);
+
+
+    border-left:
+
+    1px solid rgba(255,255,255,0.6);
+
+}
+
+
+
+/* Heading */
+
+
+.register-card h2{
+
+    text-align:center;
+
+    color:#0F172A;
+
+    font-size: 26px;
+    margin-bottom: 5px;
+
+    font-weight:600;
+
+}
+
+
+
+.register-card p{
+
+    text-align:center;
+
+    color:#475569;
+
+    font-size:14px;
+
+    margin-top: 5px;
+    margin-bottom: 20px;
+
+}
+
+
+/* =========================
+        INPUT FIELD
+========================= */
+
+
+.input-group{
+
+    display:flex;
+
+    flex-direction:column;
+
+    margin-bottom: 12px;
+
+}
+
+
+
+.input-group label{
+
+    color:#1E293B;
+
+    font-size:14px;
+
+    font-weight:500;
+
+    margin-bottom:7px;
+
+}
+
+
+
+.input-group input{
+
+
+    padding: 10px 14px;
+
+
+    border-radius:12px;
+
+
+    border:
+
+    1px solid #CBD5E1;
+
+
+
+    background:
+
+    rgba(255,255,255,0.85);
+
+
+
+    color:#0F172A;
+
+
+    outline:none;
+
+
+    font-size:14px;
+
+
+    transition:.3s;
+
+}
+
+
+
+.input-group input::placeholder{
+
+    color:#64748B;
+
+}
+
+
+
+.input-group input:focus{
+
+
+    border-color:#2563EB;
+
+
+    background:white;
+
+
+    box-shadow:
+
+    0 0 15px rgba(37,99,235,0.25);
+
+}
+
+
+
+/* =========================
+        BUTTON
+========================= */
+
+
+.register-btn{
+
+    width:100%;
+
+
+    padding: 12px;
+    margin-top: 5px;
+
+
+    border:none;
+
+
+    border-radius:12px;
+
+
+
+    background:
+
+    linear-gradient(
+        135deg,
+        #2563EB,
+        #0EA5E9
+    );
+
+
+    color:white;
+
+
+    font-size:17px;
+
+
+    font-weight:600;
+
+
+    cursor:pointer;
+
+
+    transition:.35s;
+
+}
+
+
+
+.register-btn:hover{
+
+
+    transform:translateY(-3px);
+
+
+    box-shadow:
+
+    0 12px 30px rgba(37,99,235,.4);
+
+
+}
+
+
+
+/* =========================
+        LOGIN LINK
+========================= */
+
+
+.login-link{
+
+
+    text-align:center;
+
+
+    margin-top:22px;
+
+
+    color:#334155;
+
+
+    font-size:14px;
+
+}
+
+
+
+.login-link a{
+
+
+    color:#2563EB;
+
+
+    font-weight:600;
+
+
+    text-decoration:none;
+
+}
+
+
+
+.login-link a:hover{
+
+    text-decoration:underline;
+
+}
+
+
+
+/* =========================
+        RESPONSIVE
+========================= */
+
+
+@media(max-width:900px){
+
+
+    .register-container{
+
+        flex-direction:column;
+
+    }
+
+
+    .left-panel,
+
+    .register-card{
+
+        width:100%;
+
+    }
+
+
+    .student-img{
+
+        width: 240px;
+    margin-top: 20px;
+
+    }
+
+}
+
+
+
+@media(max-width:500px){
+
+
+    .register-card{
+
+        padding:25px;
+
+    }
+
+
+    .left-panel{
+
+        padding:30px 20px;
+
+    }
+
+
+    .register-card h2{
+
+        font-size:24px;
+
+    }
+
+}
+
+/*/
+/* Inline field errors */
+.input-error {
+  border: 1px solid #e53e3e !important;
+}
+
+.field-error {
+  color: #e53e3e;
+  font-size: 13px;
+  margin-top: 4px;
+  display: block;
+}
+
+.general-error {
+  background-color: #fee2e2;
+  color: #b91c1c;
+  padding: 10px 14px;
+  border-radius: 6px;
+  margin-bottom: 16px;
+  font-size: 14px;
+}
+
+/* Success modal */
+.success-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.success-modal {
+  background: white;
+  padding: 32px 40px;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+  max-width: 400px;
+}
+
+.success-modal h3 {
+  color: #16a34a;
+  margin-bottom: 8px;
+  font-size: 22px;
+}
+
+.success-modal p {
+  color: #4b5563;
+  margin-bottom: 20px;
+}
+
+.success-ok-btn {
+  background: linear-gradient(to right, #2563eb, #0ea5e9);
+  color: white;
+  border: none;
+  padding: 10px 32px;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  font-size: 15px;
+}
+
+.success-ok-btn:hover {
+  opacity: 0.9;
+}
+
+/**/

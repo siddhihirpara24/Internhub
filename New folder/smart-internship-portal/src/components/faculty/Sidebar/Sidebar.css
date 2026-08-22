@@ -1,0 +1,328 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:"Poppins",sans-serif;
+}
+
+/* ============================
+        SIDEBAR
+============================ */
+
+.sidebar{
+    width:270px;
+    height:100vh;
+    background:linear-gradient(180deg,#0F172A,#102348);
+    position:fixed;
+    top:0;
+    left:0;
+    display:flex;
+    flex-direction:column;
+    color:#fff;
+    box-shadow:4px 0 15px rgba(0,0,0,.18);
+    overflow-y:auto;
+    z-index:1000;
+}
+
+/* ===========================
+      COLLAPSE SIDEBAR
+=========================== */
+
+.sidebar.close{
+    width:85px;
+}
+
+/* Hide Text Only */
+
+.sidebar.close .logo-text,
+.sidebar.close .faculty-title,
+.sidebar.close .menu-left span,
+.sidebar.close .submenu,
+.sidebar.close .logout-btn span{
+    display:none;
+}
+
+/* Logo */
+
+.sidebar.close .sidebar-logo{
+    justify-content:center;
+    padding:20px 0;
+}
+
+/* Keep menu item height */
+
+.sidebar.close .menu-item{
+    height:52px;
+    padding:0;
+    justify-content:center;
+}
+
+/* Keep icon centered */
+
+.sidebar.close .menu-left{
+    width:100%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:0;
+}
+
+/* Icon Size */
+
+.sidebar.close .menu-left svg{
+    font-size:22px;
+    margin:0;
+}
+
+/* Hide Arrow */
+
+.sidebar.close .menu-item > svg{
+    display:none;
+}
+
+/* Logout */
+
+.sidebar.close .logout-btn{
+    justify-content:center;
+    padding:14px 0;
+}
+
+/* Scrollbar */
+
+.sidebar::-webkit-scrollbar{
+    width:6px;
+}
+
+.sidebar::-webkit-scrollbar-thumb{
+    background:#1E3A8A;
+    border-radius:20px;
+}
+
+/* ============================
+        LOGO
+============================ */
+
+.sidebar-logo{
+    display:flex;
+    align-items:center;
+    gap:12px;
+    padding:22px 20px 16px;
+}
+
+.logo-icon{
+    font-size:36px;
+    color:#ffffff;
+}
+
+.logo-text{
+    display:flex;
+    flex-direction:column;
+}
+
+.logo-text h2{
+    font-size:22px;
+    color:#fff;
+    font-weight:700;
+    letter-spacing:.5px;
+    line-height:22px;
+}
+
+.logo-text h3{
+    font-size:12px;
+    color:#cbd5e1;
+    font-weight:500;
+    letter-spacing:1px;
+}
+
+/* ============================
+      FACULTY TITLE
+============================ */
+
+.faculty-title{
+    text-align:center;
+    font-size:12px;
+    color:#94A3B8;
+    letter-spacing:1px;
+    padding:12px;
+    border-top:1px solid rgba(255,255,255,.08);
+    border-bottom:1px solid rgba(255,255,255,.08);
+    margin-bottom:12px;
+}
+
+/* ============================
+        MENU
+============================ */
+
+.menu{
+    flex:1;
+    padding:0 12px;
+}
+
+/* ============================
+      MAIN MENU ITEM
+============================ */
+
+.menu-item{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:12px 14px;
+    border-radius:10px;
+    text-decoration:none;
+    color:#E2E8F0;
+    margin-bottom:5px;
+    transition:.3s;
+    cursor:pointer;
+}
+
+/* Left Section */
+
+.menu-left{
+    display:flex;
+    align-items:center;
+    gap:12px;
+}
+
+/* Icons */
+
+.menu-left svg{
+    font-size:18px;
+    min-width:18px;
+}
+
+/* Text */
+
+.menu-left span{
+    font-size:14px;
+    font-weight:500;
+}
+
+/* Right Arrow */
+
+.menu-item>svg{
+    font-size:12px;
+}
+
+/* Hover */
+
+.menu-item:hover{
+    background:#1E40AF;
+    color:#fff;
+}
+
+/* Active */
+
+.menu-item.active{
+    background:#2563EB;
+    color:#fff;
+    box-shadow:0 4px 10px rgba(37,99,235,.35);
+}
+
+/* ============================
+      SUBMENU
+============================ */
+
+.submenu{
+    margin-left:30px;
+    margin-bottom:10px;
+}
+
+.submenu a{
+    display:block;
+    text-decoration:none;
+    color:#CBD5E1;
+    padding:8px 12px;
+    font-size:13px;
+    border-radius:8px;
+    transition:.3s;
+}
+
+.submenu a:hover{
+    background:#1D4ED8;
+    color:#fff;
+}
+
+/* ============================
+      FOOTER
+============================ */
+
+.sidebar-footer{
+    padding:18px;
+    border-top:1px solid rgba(255,255,255,.08);
+}
+
+/* Logout */
+
+.logout-btn{
+    width:100%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:10px;
+    padding:13px;
+    text-decoration:none;
+    color:#fff;
+    background:#DC2626;
+    border-radius:10px;
+    font-size:15px;
+    font-weight:600;
+    transition:.3s;
+}
+
+.logout-btn:hover{
+    background:#B91C1C;
+}
+
+/* ============================
+      RESPONSIVE
+============================ */
+
+@media(max-width:991px){
+
+.sidebar{
+    width:240px;
+}
+
+.logo-text h2{
+    font-size:20px;
+}
+
+}
+
+@media(max-width:768px){
+
+.sidebar{
+    width:85px;
+}
+
+.logo-text,
+.faculty-title,
+.menu-left span,
+.submenu,
+.logout-btn span{
+    display:none;
+}
+
+.sidebar-logo{
+    justify-content:center;
+}
+
+.menu-item{
+    justify-content:center;
+}
+
+.menu-left{
+    gap:0;
+}
+
+.menu-item>svg{
+    display:none;
+}
+
+.logout-btn{
+    justify-content:center;
+}
+
+}

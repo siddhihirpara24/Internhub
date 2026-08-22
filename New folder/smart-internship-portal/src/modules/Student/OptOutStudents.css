@@ -1,0 +1,149 @@
+.oos-container {
+  padding: 24px;
+  background: #F4F7FC;
+  min-height: 100vh;
+  font-family: 'Poppins', sans-serif;
+  box-sizing: border-box;
+}
+
+.oos-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.oos-title {
+  color: #1E40AF;
+  font-size: 26px;
+  font-weight: 700;
+  margin: 0 0 4px 0;
+}
+
+.oos-subtitle {
+  color: #64748B;
+  margin: 0;
+  font-size: 15px;
+}
+
+.oos-count-badge {
+  background: #2563EB;
+  color: white;
+  padding: 8px 20px;
+  border-radius: 20px;
+  font-weight: 600;
+  font-size: 15px;
+  box-shadow: 0 2px 4px rgba(37, 99, 235, 0.2);
+}
+
+.oos-table-card {
+  background: #FFFFFF;
+  border-radius: 16px;
+  padding: 20px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+  overflow-x: auto;
+}
+
+.oos-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.oos-table th {
+  text-align: left;
+  padding: 16px;
+  color: #64748B;
+  font-weight: 600;
+  border-bottom: 2px solid #E2E8F0;
+  font-size: 14px;
+}
+
+.oos-table td {
+  padding: 16px;
+  border-bottom: 1px dashed #E2E8F0;
+  color: #1E293B;
+  font-size: 15px;
+}
+
+.oos-table tr:last-child td {
+  border-bottom: none;
+}
+
+.oos-student-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.oos-student-meta strong {
+  color: #1E40AF;
+  font-size: 15px;
+}
+
+.oos-student-meta span {
+  font-size: 13px;
+  color: #64748B;
+}
+
+.oos-reason-tag {
+  background: #FEE2E2;
+  color: #EF4444;
+  padding: 6px 12px;
+  border-radius: 6px;
+  font-size: 13px;
+  font-weight: 600;
+  display: inline-block;
+}
+
+.oos-action-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: #DBEAFE;
+  color: #2563EB;
+  border: 1px solid transparent;
+  padding: 8px 16px;
+  border-radius: 8px;
+  font-weight: 600;
+  font-family: 'Poppins', sans-serif;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.oos-action-btn:hover {
+  background: #BFDBFE;
+  border-color: #93C5FD;
+}
+
+.oos-loading-msg, .oos-empty-msg {
+  text-align: center;
+  padding: 50px;
+  color: #64748B;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.oos-action-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.oos-delete-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: #FEE2E2;
+  color: #DC2626;
+  border: 1px solid transparent;
+  padding: 8px 16px;
+  border-radius: 8px;
+  font-weight: 600;
+  font-family: 'Poppins', sans-serif;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.oos-delete-btn:hover {
+  background: #FECACA;
+  border-color: #FCA5A5;
+}

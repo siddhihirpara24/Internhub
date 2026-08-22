@@ -1,0 +1,122 @@
+/* src/components/common/Footer.css */
+.public-footer {
+  background-color: #002B5C; /* Navy Blue to match the header */
+  color: #FFFFFF;
+  font-family: sans-serif;
+  padding-top: 64px;
+}
+
+.footer-container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 24px 48px;
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1.5fr; /* Updated for your 4 columns */
+  gap: 40px;
+}
+
+.footer-logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.footer-logo-icon {
+  font-size: 32px;
+  color: #FFFFFF; /* White */
+}
+
+.footer-logo-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-logo-title {
+  color: #FFFFFF;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 1.1;
+  letter-spacing: 0.5px;
+}
+
+.footer-logo-subtitle {
+  color: #00A3E0; /* Professional light blue */
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.footer-description {
+  font-size: 14px;
+  line-height: 1.6;
+  max-width: 300px;
+  color: #CBD5E1;
+}
+
+.footer-heading {
+  color: #FFFFFF;
+  font-size: 16px;
+  font-weight: 700;
+  margin-bottom: 24px;
+  text-transform: uppercase;
+  border-bottom: 2px solid #00A3E0; /* Light blue underline */
+  display: inline-block;
+  padding-bottom: 4px;
+}
+
+.footer-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.footer-links li {
+  display: flex;
+  align-items: center; /* Center align items for icons */
+  gap: 12px;
+  font-size: 14px;
+  color: #CBD5E1;
+}
+
+.footer-links a {
+  color: #CBD5E1;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.footer-links a:hover {
+  color: #FFFFFF;
+}
+
+/* Icons for your contact section */
+.contact-icon {
+  color: #00A3E0; /* Light blue accent */
+  font-size: 16px;
+  flex-shrink: 0;
+}
+
+.footer-bottom {
+  background-color: #001A38; /* Darker Navy for bottom bar */
+  padding: 24px;
+  text-align: center;
+  font-size: 14px;
+  color: #CBD5E1;
+}
+
+/* Responsive Styles */
+@media (max-width: 1024px) {
+  .footer-container {
+    grid-template-columns: 1fr 1fr; /* Switch to 2 columns on tablets */
+  }
+}
+
+@media (max-width: 640px) {
+  .footer-container {
+    grid-template-columns: 1fr; /* Stack into 1 column on phones */
+  }
+}

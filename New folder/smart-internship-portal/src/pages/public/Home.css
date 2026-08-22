@@ -1,0 +1,295 @@
+/* src/pages/public/Home.css */
+.home-wrapper {
+  font-family: sans-serif;
+  color: #333333;
+  background-color: #FFFFFF;
+}
+
+.home-container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* Global Shared Button Styles */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 12px 24px;
+  border-radius: 4px; /* Sharper corners for university style */
+  font-weight: 700;
+  font-size: 15px;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  cursor: pointer;
+  text-transform: uppercase;
+}
+
+/* Primary Royal Blue Button */
+.btn-primary-solid {
+  background-color: #005CB9;
+  color: #FFFFFF;
+  border: 1px solid #005CB9;
+}
+.btn-primary-solid:hover {
+  background-color: #00458C;
+  border-color: #00458C;
+}
+
+/* Navy Outline Button */
+.btn-outline-bg {
+  background-color: #FFFFFF;
+  color: #002B5C;
+  border: 1px solid #002B5C;
+}
+.btn-outline-bg:hover {
+  background-color: #002B5C;
+  color: #FFFFFF;
+}
+
+/* White Solid Button (for dark backgrounds) */
+.btn-white-solid {
+  background-color: #FFFFFF;
+  color: #005CB9;
+  border: 1px solid #FFFFFF;
+}
+.btn-white-solid:hover {
+  background-color: #F8FAFC;
+}
+
+/* Common Header Styles */
+.section-header-center {
+  text-align: center;
+  margin-bottom: 48px;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.section-title {
+  font-size: 32px;
+  font-weight: 700;
+  color: #002B5C; /* Navy Blue */
+  margin-bottom: 16px;
+}
+.section-subtitle {
+  font-size: 16px;
+  color: #666666;
+  line-height: 1.6;
+}
+
+/* Hero Section */
+.hero-section {
+  background-color: #FFFFFF;
+  padding: 80px 0 100px;
+}
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 40px;
+  align-items: center;
+}
+.hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: #005CB9; /* Royal Blue */
+  font-size: 12px;
+  font-weight: 700;
+  margin-bottom: 24px;
+  letter-spacing: 0.5px;
+}
+.badge-icon {
+  font-size: 16px;
+}
+.hero-title {
+  font-size: 48px;
+  font-weight: 800;
+  color: #002B5C; /* Navy */
+  margin-bottom: 8px;
+  line-height: 1.1;
+}
+.hero-subtitle {
+  font-size: 28px;
+  font-weight: 600;
+  color: #333333;
+  margin-bottom: 24px;
+}
+.highlight-text {
+  color: #005CB9; /* Royal blue */
+}
+.hero-desc {
+  font-size: 18px;
+  color: #666666;
+  line-height: 1.6;
+  margin-bottom: 32px;
+  max-width: 500px;
+}
+.hero-buttons {
+  display: flex;
+  gap: 16px;
+}
+
+/* Hero Image Card */
+.image-card {
+  background-color: #005CB9; /* Royal Blue background accent */
+  padding: 12px;
+  border-radius: 4px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+.hero-image {
+  width: 100%;
+  border-radius: 4px;
+  display: block;
+}
+
+/* Portal Intro Section */
+.intro-section {
+  background-color: #F4F6F8; /* Subtle gray bg */
+  padding: 80px 0;
+}
+.intro-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+}
+.intro-card {
+  background-color: #FFFFFF;
+  padding: 32px;
+  border-radius: 4px;
+  border-top: 4px solid #005CB9; /* Royal blue top border */
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.intro-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+.intro-icon-wrapper {
+  width: 64px;
+  height: 64px;
+  background-color: #002B5C; /* Navy */
+  color: #FFFFFF;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28px;
+  margin: 0 auto 24px;
+}
+.intro-card h3 {
+  font-size: 20px;
+  font-weight: 700;
+  color: #002B5C;
+  margin-bottom: 12px;
+}
+.intro-card p {
+  font-size: 15px;
+  color: #666666;
+  line-height: 1.6;
+}
+
+/* Selection Section */
+.selection-section {
+  background-color: #FFFFFF;
+  padding: 80px 0;
+}
+.selection-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+.selection-card {
+  background-color: #005CB9; /* Royal blue cards */
+  color: #FFFFFF;
+  border-radius: 4px;
+  padding: 48px 40px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+.selection-icon-wrapper {
+  width: 72px;
+  height: 72px;
+  background-color: rgba(255,255,255,0.1);
+  color: #FFFFFF;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 32px;
+  margin-bottom: 24px;
+}
+.selection-card h3 {
+  font-size: 24px;
+  font-weight: 700;
+  color: #FFFFFF;
+  margin-bottom: 16px;
+}
+.selection-card p {
+  font-size: 16px;
+  color: #E2E8F0;
+  line-height: 1.6;
+  margin-bottom: 32px;
+  flex: 1;
+}
+.selection-btn {
+  width: 100%;
+  background-color: #FFFFFF;
+  color: #005CB9;
+  border-color: #FFFFFF;
+}
+.selection-btn:hover {
+  background-color: #F4F6F8;
+  color: #005CB9;
+}
+
+/* Simple CTA */
+.cta-section {
+  background-color: #002B5C; /* Navy CTA */
+  padding: 60px 0;
+  text-align: center;
+}
+.cta-container h2 {
+  font-size: 28px;
+  font-weight: 700;
+  color: #FFFFFF;
+  margin-bottom: 12px;
+}
+.cta-container p {
+  font-size: 16px;
+  color: #CBD5E1;
+  margin-bottom: 32px;
+}
+.cta-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+}
+
+/* Responsive Styles */
+@media (max-width: 1024px) {
+  .hero-grid { grid-template-columns: 1fr; text-align: center; gap: 60px; }
+  .hero-desc { margin-left: auto; margin-right: auto; }
+  .hero-buttons { justify-content: center; }
+  .hero-badge { margin: 0 auto 24px; }
+  .image-card { max-width: 600px; margin: 0 auto; }
+}
+
+@media (max-width: 768px) {
+  .intro-grid { grid-template-columns: 1fr; gap: 24px; }
+  .selection-grid { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 640px) {
+  .hero-title { font-size: 36px; }
+  .hero-subtitle { font-size: 22px; }
+  .hero-buttons, .cta-buttons { flex-direction: column; }
+  .selection-card { padding: 32px 24px; }
+}

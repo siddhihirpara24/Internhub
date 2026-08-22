@@ -1,0 +1,306 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+.login-page{
+
+min-height:100vh;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+padding:30px;
+
+background:
+linear-gradient(
+rgba(15,23,42,.55),
+rgba(30,64,175,.55)
+),
+url("/internship-bg.jpg");
+
+background-size:cover;
+background-position:center;
+}
+
+.login-container{
+
+width:1000px;
+max-width:95%;
+
+display:flex;
+
+overflow:hidden;
+
+border-radius:25px;
+
+box-shadow:0 20px 50px rgba(0,0,0,.35);
+
+border:1px solid rgba(255,255,255,.25);
+
+}
+
+.left-panel{
+
+width:45%;
+
+padding:50px;
+
+display:flex;
+
+flex-direction:column;
+
+justify-content:center;
+
+align-items:center;
+
+text-align:center;
+
+background:linear-gradient(135deg,#0F172A,#1E40AF);
+
+color:white;
+
+}
+
+.left-panel h1{
+
+font-size:36px;
+
+margin-bottom:20px;
+
+}
+
+.left-panel p{
+
+line-height:1.8;
+
+color:#E2E8F0;
+
+}
+
+.student-img{
+
+width:280px;
+
+margin-top:25px;
+
+animation:float 3s ease-in-out infinite;
+
+}
+
+@keyframes float{
+
+0%{transform:translateY(0);}
+50%{transform:translateY(-12px);}
+100%{transform:translateY(0);}
+
+}
+
+.login-card{
+
+width:55%;
+
+padding:50px;
+
+background:rgba(219,234,254,.75);
+
+backdrop-filter:blur(20px);
+
+border-left:1px solid rgba(255,255,255,.4);
+
+}
+
+.login-card h2{
+
+text-align:center;
+
+font-size:30px;
+
+color:#0F172A;
+
+}
+
+.login-card p{
+
+text-align:center;
+
+margin:10px 0 30px;
+
+color:#475569;
+
+}
+
+.input-group{
+
+display:flex;
+
+flex-direction:column;
+
+margin-bottom:20px;
+
+}
+
+.input-group label{
+
+margin-bottom:8px;
+
+font-weight:500;
+
+color:#1E293B;
+
+}
+
+.input-group input{
+
+padding:14px;
+
+border-radius:12px;
+
+border:1px solid #CBD5E1;
+
+background:rgba(255,255,255,.85);
+
+outline:none;
+
+font-size:14px;
+
+transition:.3s;
+
+}
+
+.input-group input:focus{
+
+border-color:#2563EB;
+
+background:white;
+
+box-shadow:0 0 15px rgba(37,99,235,.25);
+
+}
+
+.forgot-password{
+
+text-align:right;
+
+margin-bottom:20px;
+
+}
+
+.forgot-password a{
+
+text-decoration:none;
+
+color:#2563EB;
+
+font-size:14px;
+
+}
+
+.login-btn{
+
+width:100%;
+
+padding:14px;
+
+border:none;
+
+border-radius:12px;
+
+font-size:17px;
+
+font-weight:600;
+
+cursor:pointer;
+
+color:white;
+
+background:linear-gradient(135deg,#2563EB,#0EA5E9);
+
+transition:.3s;
+
+}
+
+.login-btn:hover{
+
+transform:translateY(-3px);
+
+box-shadow:0 12px 30px rgba(37,99,235,.4);
+
+}
+
+.register-link{
+
+margin-top:20px;
+
+text-align:center;
+
+color:#334155;
+
+}
+
+.register-link a{
+
+text-decoration:none;
+
+font-weight:600;
+
+color:#2563EB;
+
+}
+
+@media(max-width:900px){
+
+.login-container{
+
+flex-direction:column;
+
+}
+
+.left-panel,
+.login-card{
+
+width:100%;
+
+}
+
+.student-img{
+
+width:220px;
+
+}
+
+}
+
+/**/
+.input-error {
+  border: 2px solid #e53935 !important;
+  outline: none;
+}
+
+.input-error:focus {
+  border: 2px solid #e53935 !important;
+  box-shadow: 0 0 5px rgba(229, 57, 53, 0.3);
+}
+
+.error-message {
+  color: #e53935;
+  font-size: 14px;
+  margin-top: 12px;
+  text-align: center;
+  font-weight: 500;
+}
+.field-error {
+  display: block;
+  color: #d32f2f;
+  font-size: 13px;
+  margin-top: 4px;
+  margin-left: 2px;
+}
+/**/

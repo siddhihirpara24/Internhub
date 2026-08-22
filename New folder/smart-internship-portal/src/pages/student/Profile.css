@@ -1,0 +1,533 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+
+
+/* =========================================
+        GLOBAL
+========================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+
+/* =========================================
+        MAIN PROFILE PAGE
+========================================= */
+
+.student-profile {
+    margin-top: 30px;
+    width: 100%;
+    min-height: 100vh;
+    padding: 30px;
+    background: #f4f7fc;
+}
+
+
+/* =========================================
+        PAGE HEADER
+========================================= */
+
+.profile-page-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.profile-page-header h2 {
+    font-size: 30px;
+    font-weight: 700;
+    color: #1e293b;
+}
+
+.profile-page-header p {
+    margin-top: 5px;
+    font-size: 14px;
+    color: #64748b;
+}
+
+
+/* =========================================
+        EDIT BUTTON
+========================================= */
+
+.edit-profile-btn {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+
+    border: none;
+    border-radius: 10px;
+
+    padding: 12px 22px;
+
+    background: #2563eb;
+    color: white;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.edit-profile-btn:hover {
+    background: #1d4ed8;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 18px rgba(37, 99, 235, 0.25);
+}
+
+
+/* =========================================
+        MAIN PROFILE CARD
+========================================= */
+
+.profile-main-card {
+    background: #ffffff;
+
+    border-radius: 18px;
+
+    padding: 30px;
+
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.07);
+
+    animation: profileFade 0.5s ease;
+}
+
+
+/* =========================================
+        PROFILE TOP
+========================================= */
+
+.profile-top {
+    display: flex;
+    align-items: center;
+
+    padding-bottom: 30px;
+
+    border-bottom: 1px solid #e5e7eb;
+}
+
+
+/* =========================================
+        OVAL PROFILE IMAGE
+========================================= */
+
+.profile-image-wrapper {
+    width: 125px;
+    height: 150px;
+
+    border-radius: 50%;
+
+    overflow: hidden;
+
+    background: #eaf2ff;
+
+    border: 5px solid #ffffff;
+
+    box-shadow:
+        0 0 0 3px #2563eb,
+        0 8px 20px rgba(37, 99, 235, 0.18);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    flex-shrink: 0;
+}
+
+.profile-image-wrapper img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+}
+
+
+/* =========================================
+        FALLBACK ICON
+========================================= */
+
+.profile-fallback-icon {
+    display: none;
+
+    font-size: 55px;
+    color: #2563eb;
+}
+
+.profile-fallback .profile-fallback-icon {
+    display: block;
+}
+
+
+/* =========================================
+        BASIC PROFILE
+========================================= */
+
+.profile-basic {
+    margin-left: 30px;
+}
+
+.profile-basic h1 {
+    font-size: 30px;
+    font-weight: 700;
+    color: #1e293b;
+}
+
+.student-role {
+    color: #64748b;
+
+    font-size: 15px;
+
+    margin-top: 3px;
+    margin-bottom: 12px;
+}
+
+
+/* =========================================
+        STUDENT ID
+========================================= */
+
+.student-id {
+    display: flex;
+    align-items: center;
+
+    gap: 8px;
+
+    color: #475569;
+
+    font-size: 14px;
+}
+
+.student-id svg {
+    color: #2563eb;
+}
+
+
+/* =========================================
+        ACTIVE STATUS
+========================================= */
+
+.profile-status {
+    display: inline-block;
+
+    margin-top: 12px;
+
+    padding: 6px 15px;
+
+    border-radius: 20px;
+
+    background: #dcfce7;
+
+    color: #15803d;
+
+    font-size: 12px;
+
+    font-weight: 600;
+}
+
+
+/* =========================================
+        PROFILE SECTION
+========================================= */
+
+.profile-section {
+    padding-top: 30px;
+
+    padding-bottom: 25px;
+
+    border-bottom: 1px solid #e5e7eb;
+}
+
+
+/* =========================================
+        SECTION TITLE
+========================================= */
+
+.section-title {
+    display: flex;
+    align-items: center;
+
+    gap: 10px;
+
+    margin-bottom: 20px;
+}
+
+.section-title svg {
+    color: #2563eb;
+
+    font-size: 21px;
+}
+
+.section-title h3 {
+    font-size: 19px;
+
+    color: #1e293b;
+
+    font-weight: 600;
+}
+
+
+/* =========================================
+        PROFILE GRID
+========================================= */
+
+.profile-grid {
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 18px;
+}
+
+
+/* =========================================
+        INFO BOX
+========================================= */
+
+.profile-info-box {
+    display: flex;
+
+    align-items: flex-start;
+
+    gap: 14px;
+
+    padding: 17px;
+
+    background: #f8fafc;
+
+    border: 1px solid #e2e8f0;
+
+    border-radius: 13px;
+
+    transition: 0.3s;
+}
+
+.profile-info-box:hover {
+    border-color: #2563eb;
+
+    background: #f8fbff;
+
+    transform: translateY(-2px);
+
+    box-shadow: 0 5px 15px rgba(37, 99, 235, 0.08);
+}
+
+
+/* =========================================
+        INFO ICON
+========================================= */
+
+.info-icon {
+    width: 42px;
+    height: 42px;
+
+    border-radius: 10px;
+
+    background: #eaf2ff;
+
+    color: #2563eb;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 17px;
+
+    flex-shrink: 0;
+}
+
+
+/* =========================================
+        INFO TEXT
+========================================= */
+
+.profile-info-box label {
+    display: block;
+
+    color: #64748b;
+
+    font-size: 12px;
+
+    font-weight: 500;
+
+    margin-bottom: 5px;
+}
+
+.profile-info-box p {
+    color: #1e293b;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    word-break: break-word;
+}
+
+
+/* =========================================
+        CGPA
+========================================= */
+
+.cgpa {
+    color: #16a34a !important;
+}
+
+
+/* =========================================
+        SKILLS
+========================================= */
+
+.skills-section {
+    border-bottom: none;
+
+    padding-bottom: 5px;
+}
+
+.skills-list {
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 10px;
+}
+
+.skill-tag {
+    padding: 8px 15px;
+
+    background: #eaf2ff;
+
+    color: #2563eb;
+
+    border: 1px solid #bfdbfe;
+
+    border-radius: 20px;
+
+    font-size: 13px;
+
+    font-weight: 600;
+
+    transition: 0.3s;
+}
+
+.skill-tag:hover {
+    background: #2563eb;
+
+    color: white;
+
+    transform: translateY(-2px);
+}
+
+
+/* =========================================
+        ANIMATION
+========================================= */
+
+@keyframes profileFade {
+
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+
+/* =========================================
+        RESPONSIVE
+========================================= */
+
+@media (max-width: 992px) {
+
+    .student-profile {
+        padding: 25px;
+    }
+
+    .profile-grid {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+
+@media (max-width: 768px) {
+
+    .student-profile {
+        padding: 20px;
+    }
+
+    .profile-page-header {
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 15px;
+    }
+
+    .edit-profile-btn {
+        width: 100%;
+
+        justify-content: center;
+    }
+
+    .profile-top {
+        flex-direction: column;
+
+        text-align: center;
+    }
+
+    .profile-basic {
+        margin-left: 0;
+
+        margin-top: 20px;
+    }
+
+    .student-id {
+        justify-content: center;
+    }
+
+}
+
+
+@media (max-width: 576px) {
+
+    .student-profile {
+        padding: 15px;
+    }
+
+    .profile-main-card {
+        padding: 20px;
+    }
+
+    .profile-page-header h2 {
+        font-size: 25px;
+    }
+
+    .profile-basic h1 {
+        font-size: 24px;
+    }
+
+    .profile-image-wrapper {
+        width: 105px;
+        height: 125px;
+    }
+
+    .profile-info-box {
+        padding: 14px;
+    }
+
+    .info-icon {
+        width: 38px;
+        height: 38px;
+    }
+
+}

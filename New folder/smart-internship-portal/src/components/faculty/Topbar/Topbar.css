@@ -1,0 +1,270 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:"Poppins",sans-serif;
+}
+
+/* ===========================
+        TOPBAR
+=========================== */
+
+.topbar{
+
+    position:fixed;
+
+    top:0;
+
+    left:270px;
+
+    right:0;
+
+    height:80px;
+
+    background:#fff;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:space-between;
+
+    padding:0 28px;
+
+    box-shadow:0 2px 12px rgba(0,0,0,.08);
+
+    transition:.3s;
+
+    z-index:999;
+
+}
+
+/* When Sidebar is Closed */
+
+.topbar.expand{
+
+    left:80px;
+
+}
+
+/* ===========================
+        LEFT
+=========================== */
+
+.topbar-left{
+    display:flex;
+    align-items:center;
+    gap:18px;
+}
+
+.menu-btn{
+    width:42px;
+    height:42px;
+    border:none;
+    outline:none;
+    border-radius:10px;
+    background:#EFF6FF;
+    color:#2563EB;
+    font-size:18px;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.menu-btn:hover{
+    background:#2563EB;
+    color:#fff;
+}
+
+.topbar-left h2{
+    font-size:24px;
+    color:#1E293B;
+    font-weight:700;
+}
+
+.topbar-left p{
+    font-size:13px;
+    color:#64748B;
+    margin-top:2px;
+}
+
+/* ===========================
+        SEARCH
+=========================== */
+
+.topbar-search-box{
+    width:420px;
+    height:46px;
+    background:#F8FAFC;
+    border:1px solid #E2E8F0;
+    border-radius:10px;
+    display:flex;
+    align-items:center;
+    padding:0 16px;
+}
+
+.topbar-search-icon{
+    color:#64748B;
+    font-size:15px;
+}
+
+.topbar-search-box input{
+    width:100%;
+    border:none;
+    outline:none;
+    background:transparent;
+    padding-left:12px;
+    font-size:14px;
+    color:#334155;
+}
+
+.topbar-search-box input::placeholder{
+    color:#94A3B8;
+}
+
+/* ===========================
+        RIGHT
+=========================== */
+
+.topbar-right{
+    display:flex;
+    align-items:center;
+    gap:20px;
+}
+
+.today-date{
+    color:#64748B;
+    font-size:14px;
+    font-weight:500;
+}
+
+/* ===========================
+        ICONS
+=========================== */
+
+.icon-box{
+    width:42px;
+    height:42px;
+    background:#EFF6FF;
+    border-radius:10px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    cursor:pointer;
+    position:relative;
+    transition:.3s;
+}
+
+.icon-box svg{
+    color:#2563EB;
+    font-size:18px;
+}
+
+.icon-box:hover{
+    background:#2563EB;
+}
+
+.icon-box:hover svg{
+    color:#fff;
+}
+
+/* Badge */
+
+.badge{
+    position:absolute;
+    top:-5px;
+    right:-5px;
+    width:20px;
+    height:20px;
+    background:#EF4444;
+    color:#fff;
+    border-radius:50%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size:11px;
+    font-weight:600;
+}
+
+/* ===========================
+        PROFILE
+=========================== */
+
+.profile{
+    display:flex;
+    align-items:center;
+    gap:12px;
+    cursor:pointer;
+}
+
+.profile-icon{
+    font-size:42px;
+    color:#2563EB;
+}
+
+.profile h4{
+    color:#1E293B;
+    font-size:15px;
+    font-weight:600;
+}
+
+.profile span{
+    color:#64748B;
+    font-size:13px;
+}
+
+/* ===========================
+        RESPONSIVE
+=========================== */
+
+@media(max-width:1200px){
+
+.search-box{
+    width:300px;
+}
+
+}
+
+@media(max-width:992px){
+
+.today-date{
+    display:none;
+}
+
+.search-box{
+    width:220px;
+}
+
+}
+
+@media(max-width:768px){
+
+.topbar{
+    left:85px;
+    width:calc(100% - 85px);
+    padding:0 15px;
+}
+
+.search-box{
+    display:none;
+}
+
+.topbar-left h2{
+    font-size:20px;
+}
+
+.topbar-left p{
+    display:none;
+}
+
+.profile div{
+    display:none;
+}
+
+}
+.main-content.expand .topbar{
+
+    left:80px;
+
+}

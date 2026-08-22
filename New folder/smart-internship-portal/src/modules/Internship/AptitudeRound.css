@@ -1,0 +1,317 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:"Poppins",sans-serif;
+}
+
+/* ==========================================
+            ALL STUDENTS PAGE
+========================================== */
+
+.student-page{
+    width:100%;
+    min-height:100vh;
+    padding:30px;
+    background:#F4F7FC;
+}
+
+/* ==========================================
+                HEADER
+========================================== */
+
+.student-header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:25px;
+}
+
+.student-header h2{
+    font-size:36px;
+    font-weight:700;
+    color:#1E40AF;
+}
+
+.student-header p{
+    margin-top:5px;
+    color:#64748B;
+    font-size:15px;
+}
+
+/* ==========================================
+                ADD BUTTON
+========================================== */
+
+.add-btn{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    background:#2563EB;
+    color:#fff;
+    border:none;
+    border-radius:12px;
+    padding:14px 24px;
+    cursor:pointer;
+    font-size:15px;
+    font-weight:600;
+    transition:.3s;
+}
+
+.add-btn:hover{
+    background:#1D4ED8;
+    transform:translateY(-2px);
+}
+
+/* ==========================================
+                TOOLBAR
+========================================== */
+
+.toolbar{
+    background:#ffffff;
+    border-radius:18px;
+    padding:18px 22px;
+    margin-bottom:25px;
+    box-shadow:0 5px 18px rgba(0,0,0,.08);
+}
+
+/* ==========================================
+            SEARCH BOX
+========================================== */
+
+.student-search-box{
+    position:relative;
+    width:420px;
+    max-width:100%;
+}
+
+.student-search-box input{
+    width:100%;
+    height:54px;
+    padding:0 18px 0 50px;
+    border:1px solid #CBD5E1;
+    border-radius:12px;
+    outline:none;
+    font-size:15px;
+    background:#fff;
+    transition:.3s;
+}
+
+.student-search-box input:focus{
+    border-color:#2563EB;
+    box-shadow:0 0 0 3px rgba(37,99,235,.15);
+}
+
+.student-search-box input::placeholder{
+    color:#94A3B8;
+}
+
+.student-search-box .search-icon{
+    position:absolute;
+    left:18px;
+    top:50%;
+    transform:translateY(-50%);
+    color:#64748B;
+    font-size:17px;
+}
+
+/* ==========================================
+                TABLE
+========================================== */
+
+.table-container{
+    background:#fff;
+    border-radius:18px;
+    overflow:hidden;
+    box-shadow:0 8px 20px rgba(0,0,0,.08);
+}
+
+table{
+    width:100%;
+    border-collapse:collapse;
+}
+
+thead{
+    background:#2563EB;
+}
+
+thead th{
+    color:#fff;
+    padding:18px 15px;
+    text-align:left;
+    font-size:15px;
+    font-weight:600;
+}
+
+tbody td{
+    padding:18px 15px;
+    border-bottom:1px solid #EDF2F7;
+    color:#334155;
+    font-size:15px;
+}
+
+tbody tr{
+    transition:.3s;
+}
+
+tbody tr:hover{
+    background:#F8FAFC;
+}
+
+tbody tr:last-child td{
+    border-bottom:none;
+}
+
+/* ==========================================
+            STUDENT PHOTO
+========================================== */
+
+.student-photo{
+    width:50px;
+    height:50px;
+    border-radius:50%;
+    object-fit:cover;
+    border:2px solid #E2E8F0;
+}
+
+/* ==========================================
+                STATUS
+========================================== */
+
+.status{
+    display:inline-block;
+    padding:7px 16px;
+    border-radius:25px;
+    font-size:13px;
+    font-weight:600;
+    min-width:95px;
+    text-align:center;
+}
+
+/* Pass */
+
+.status.pass{
+    background:#DCFCE7;
+    color:#15803D;
+}
+
+/* Fail */
+
+.status.fail{
+    background:#FEE2E2;
+    color:#DC2626;
+}
+
+/* Pending */
+
+.status.pending{
+    background:#FEF3C7;
+    color:#B45309;
+}
+
+.status.placed{
+    background:#DBEAFE;
+    color:#1D4ED8;
+}
+
+/* ==========================================
+            ACTION BUTTONS
+========================================== */
+
+.action-btns{
+    display:flex;
+    gap:10px;
+}
+
+.action-btns button{
+    width:40px;
+    height:40px;
+    border:none;
+    border-radius:10px;
+    cursor:pointer;
+    color:#fff;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    transition:.3s;
+    font-size:15px;
+}
+
+.view-btn{
+    background:#2563EB;
+}
+
+.view-btn:hover{
+    background:#1D4ED8;
+    transform:translateY(-2px);
+}
+
+.edit-btn{
+    background:#F59E0B;
+}
+
+.edit-btn:hover{
+    background:#D97706;
+    transform:translateY(-2px);
+}
+
+.delete-btn{
+    background:#EF4444;
+}
+
+.delete-btn:hover{
+    background:#DC2626;
+    transform:translateY(-2px);
+}
+
+/* ==========================================
+                RESPONSIVE
+========================================== */
+
+@media(max-width:1200px){
+
+    .table-container{
+        overflow-x:auto;
+    }
+
+    table{
+        min-width:1200px;
+    }
+
+}
+
+@media(max-width:768px){
+
+    .student-page{
+        padding:20px;
+    }
+
+    .student-header{
+        flex-direction:column;
+        align-items:flex-start;
+        gap:15px;
+    }
+
+    .student-search-box{
+        width:100%;
+    }
+
+}
+
+@media(max-width:576px){
+
+    .student-page{
+        padding:15px;
+    }
+
+    .student-header h2{
+        font-size:28px;
+    }
+
+    .toolbar{
+        padding:15px;
+    }
+
+}

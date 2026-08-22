@@ -1,0 +1,756 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+
+/* =========================================
+            MAIN PAGE
+========================================= */
+
+.optout-page {
+
+    width: 100%;
+    min-height: 100vh;
+    margin-top: 30px;
+    padding: 30px;
+    background: #F4F7FC;
+
+}
+
+
+/* =========================================
+              HEADER
+========================================= */
+
+.optout-header {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    margin-bottom: 25px;
+
+}
+
+.optout-header h2 {
+
+    font-size: 30px;
+
+    font-weight: 700;
+
+    color: #1E293B;
+
+}
+
+.optout-header p {
+
+    margin-top: 5px;
+
+    font-size: 14px;
+
+    color: #64748B;
+
+}
+
+
+/* =========================================
+              BACK BUTTON
+========================================= */
+
+.back-btn {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    border: none;
+
+    background: #2563EB;
+
+    color: white;
+
+    padding: 12px 22px;
+
+    border-radius: 10px;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: .3s;
+
+}
+
+.back-btn:hover {
+
+    background: #1D4ED8;
+
+    transform: translateY(-2px);
+
+}
+
+
+/* =========================================
+              MAIN CARD
+========================================= */
+
+.optout-card {
+
+    width: 100%;
+
+    max-width: 1200px;
+
+    margin: auto;
+
+    background: #FFFFFF;
+
+    border-radius: 18px;
+
+    padding: 32px;
+
+    box-shadow:
+        0 5px 20px rgba(0, 0, 0, .07);
+
+}
+
+
+/* =========================================
+             CARD HEADING
+========================================= */
+
+.card-heading {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+    padding-bottom: 25px;
+
+    border-bottom: 1px solid #E2E8F0;
+
+    margin-bottom: 30px;
+
+}
+
+.heading-icon {
+
+    width: 55px;
+
+    height: 55px;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    border-radius: 14px;
+
+    background: #EAF2FF;
+
+    color: #2563EB;
+
+    font-size: 24px;
+
+}
+
+.card-heading h3 {
+
+    font-size: 22px;
+
+    font-weight: 700;
+
+    color: #1E293B;
+
+}
+
+.card-heading p {
+
+    margin-top: 4px;
+
+    color: #64748B;
+
+    font-size: 13px;
+
+}
+
+
+/* =========================================
+              SECTION
+========================================= */
+
+.section {
+
+    margin-bottom: 32px;
+
+}
+
+.section-title {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    margin-bottom: 20px;
+
+    padding-bottom: 12px;
+
+    border-bottom: 1px solid #E2E8F0;
+
+}
+
+.section-title svg {
+
+    color: #2563EB;
+
+    font-size: 18px;
+
+}
+
+.section-title h4 {
+
+    font-size: 17px;
+
+    font-weight: 600;
+
+    color: #1E293B;
+
+}
+
+
+/* =========================================
+              FORM GRID
+========================================= */
+
+.form-grid {
+
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 22px 25px;
+
+}
+
+.single-column {
+
+    grid-template-columns: 1fr;
+
+}
+
+
+/* =========================================
+              FORM GROUP
+========================================= */
+
+.form-group {
+
+    display: flex;
+
+    flex-direction: column;
+
+}
+
+.form-group label {
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    color: #334155;
+
+    margin-bottom: 8px;
+
+}
+
+.form-group label span {
+
+    color: #EF4444;
+
+    margin-left: 3px;
+
+}
+
+
+/* =========================================
+             INPUT WRAPPER
+========================================= */
+
+.input-wrapper {
+
+    position: relative;
+
+    width: 100%;
+
+}
+
+.input-wrapper > svg {
+
+    position: absolute;
+
+    left: 15px;
+
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    color: #64748B;
+
+    font-size: 15px;
+
+    z-index: 1;
+
+}
+
+.input-wrapper input,
+.input-wrapper select {
+
+    width: 100%;
+
+    height: 48px;
+
+    padding: 0 15px 0 43px;
+
+    border: 1px solid #CBD5E1;
+
+    border-radius: 10px;
+
+    outline: none;
+
+    background: #FFFFFF;
+
+    color: #334155;
+
+    font-size: 14px;
+
+    transition: .3s;
+
+}
+
+.input-wrapper input::placeholder {
+
+    color: #94A3B8;
+
+}
+
+.input-wrapper input:focus,
+.input-wrapper select:focus {
+
+    border-color: #2563EB;
+
+    box-shadow:
+        0 0 0 3px rgba(37, 99, 235, .12);
+
+}
+
+.input-wrapper input:hover,
+.input-wrapper select:hover {
+
+    border-color: #94A3B8;
+
+}
+
+
+/* =========================================
+              TEXTAREA
+========================================= */
+
+.textarea-wrapper {
+
+    position: relative;
+
+}
+
+.textarea-wrapper svg {
+
+    position: absolute;
+
+    left: 15px;
+
+    top: 17px;
+
+    color: #64748B;
+
+    font-size: 15px;
+
+}
+
+.textarea-wrapper textarea {
+
+    width: 100%;
+
+    min-height: 130px;
+
+    resize: vertical;
+
+    padding: 13px 15px 13px 43px;
+
+    border: 1px solid #CBD5E1;
+
+    border-radius: 10px;
+
+    outline: none;
+
+    color: #334155;
+
+    font-size: 14px;
+
+    line-height: 1.6;
+
+    transition: .3s;
+
+}
+
+.textarea-wrapper textarea::placeholder {
+
+    color: #94A3B8;
+
+}
+
+.textarea-wrapper textarea:focus {
+
+    border-color: #2563EB;
+
+    box-shadow:
+        0 0 0 3px rgba(37, 99, 235, .12);
+
+}
+
+
+/* =========================================
+          CONFIRMATION BOX
+========================================= */
+
+.confirmation-box {
+
+    background: #F8FAFC;
+
+    border: 1px solid #E2E8F0;
+
+    border-radius: 12px;
+
+    padding: 18px;
+
+    margin-top: 10px;
+
+    margin-bottom: 25px;
+
+}
+
+.checkbox-container {
+
+    display: flex;
+
+    align-items: flex-start;
+
+    gap: 12px;
+
+}
+
+.checkbox-container input {
+
+    width: 18px;
+
+    height: 18px;
+
+    margin-top: 3px;
+
+    accent-color: #2563EB;
+
+    cursor: pointer;
+
+    flex-shrink: 0;
+
+}
+
+.checkbox-container label {
+
+    cursor: pointer;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 5px;
+
+    color: #334155;
+
+}
+
+.checkbox-container strong {
+
+    font-size: 13px;
+
+    font-weight: 600;
+
+}
+
+.checkbox-container small {
+
+    color: #64748B;
+
+    font-size: 12px;
+
+    line-height: 1.6;
+
+}
+
+
+/* =========================================
+             BUTTON AREA
+========================================= */
+
+.button-area {
+
+    display: flex;
+
+    justify-content: flex-end;
+
+    align-items: center;
+
+    gap: 15px;
+
+    padding-top: 5px;
+
+}
+
+
+/* =========================================
+             CANCEL BUTTON
+========================================= */
+
+.cancel-btn {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 8px;
+
+    padding: 13px 25px;
+
+    border: none;
+
+    border-radius: 10px;
+
+    background: #E2E8F0;
+
+    color: #334155;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: .3s;
+
+}
+
+.cancel-btn:hover {
+
+    background: #CBD5E1;
+
+    transform: translateY(-2px);
+
+}
+
+
+/* =========================================
+             SUBMIT BUTTON
+========================================= */
+
+.submit-btn {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 9px;
+
+    padding: 13px 25px;
+
+    border: none;
+
+    border-radius: 10px;
+
+    background: #2563EB;
+
+    color: white;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: .3s;
+
+}
+
+.submit-btn:hover {
+
+    background: #1D4ED8;
+
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 7px 18px rgba(37, 99, 235, .25);
+
+}
+
+.submit-btn:disabled,
+.cancel-btn:disabled {
+
+    opacity: .6;
+
+    cursor: not-allowed;
+
+    transform: none;
+
+}
+
+
+/* =========================================
+              ANIMATION
+========================================= */
+
+.optout-card {
+
+    animation: fadeIn .4s ease;
+
+}
+
+@keyframes fadeIn {
+
+    from {
+
+        opacity: 0;
+
+        transform: translateY(15px);
+
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform: translateY(0);
+
+    }
+
+}
+
+
+/* =========================================
+              RESPONSIVE
+========================================= */
+
+@media (max-width: 900px) {
+
+    .optout-page {
+
+        padding: 20px;
+
+    }
+
+    .form-grid {
+
+        grid-template-columns: 1fr;
+
+    }
+
+    .optout-card {
+
+        padding: 25px;
+
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .optout-page {
+
+        padding: 15px;
+
+    }
+
+    .optout-header {
+
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 15px;
+
+    }
+
+    .optout-header h2 {
+
+        font-size: 24px;
+
+    }
+
+    .back-btn {
+
+        width: 100%;
+
+        justify-content: center;
+
+    }
+
+    .optout-card {
+
+        padding: 18px;
+
+        border-radius: 14px;
+
+    }
+
+    .card-heading h3 {
+
+        font-size: 18px;
+
+    }
+
+    .card-heading p {
+
+        font-size: 12px;
+
+    }
+
+    .button-area {
+
+        flex-direction: column-reverse;
+
+    }
+
+    .submit-btn,
+    .cancel-btn {
+
+        width: 100%;
+
+    }
+
+}

@@ -1,0 +1,712 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+
+/* =========================================
+        MAIN PAGE
+========================================= */
+
+.track-application {
+    margin-top: 30px;
+    width: 100%;
+    min-height: 100vh;
+    padding: 30px;
+    background: #F4F7FC;
+}
+
+
+/* =========================================
+        HEADER
+========================================= */
+
+.application-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.application-header h2 {
+    font-size: 30px;
+    font-weight: 700;
+    color: #1E293B;
+}
+
+.application-header p {
+    margin-top: 5px;
+    color: #64748B;
+    font-size: 15px;
+}
+
+
+/* =========================================
+        BACK BUTTON
+========================================= */
+
+.back-btn {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+
+    background: #2563EB;
+    color: #fff;
+
+    border: none;
+    border-radius: 10px;
+
+    padding: 12px 22px;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.back-btn:hover {
+    background: #1D4ED8;
+    transform: translateY(-2px);
+}
+
+
+/* =========================================
+        SUMMARY
+========================================= */
+
+.application-summary {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    margin-bottom: 25px;
+}
+
+.summary-card {
+    background: #fff;
+    border: 1px solid #E5E7EB;
+
+    border-radius: 15px;
+
+    padding: 20px;
+
+    display: flex;
+    align-items: center;
+
+    gap: 15px;
+
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.05);
+
+    transition: 0.3s;
+}
+
+.summary-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 7px 20px rgba(0, 0, 0, 0.09);
+}
+
+
+.summary-icon {
+    width: 52px;
+    height: 52px;
+
+    border-radius: 12px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 23px;
+}
+
+
+/* Summary Colors */
+
+.summary-icon.blue {
+    background: #EAF2FF;
+    color: #2563EB;
+}
+
+.summary-icon.orange {
+    background: #FFF7E6;
+    color: #F59E0B;
+}
+
+.summary-icon.purple {
+    background: #F3E8FF;
+    color: #7C3AED;
+}
+
+.summary-icon.green {
+    background: #EAFBF1;
+    color: #16A34A;
+}
+
+
+.summary-card h3 {
+    font-size: 25px;
+    color: #1E293B;
+    font-weight: 700;
+}
+
+.summary-card p {
+    font-size: 13px;
+    color: #64748B;
+    margin-top: 2px;
+}
+
+
+/* =========================================
+        TOOLBAR
+========================================= */
+
+.application-toolbar {
+    background: #fff;
+
+    border: 1px solid #E5E7EB;
+
+    border-radius: 15px;
+
+    padding: 18px;
+
+    display: flex;
+    justify-content: space-between;
+
+    gap: 15px;
+
+    margin-bottom: 20px;
+}
+
+
+/* Search */
+
+.search-box {
+    width: 450px;
+
+    display: flex;
+    align-items: center;
+
+    position: relative;
+}
+
+.search-box svg {
+    position: absolute;
+    left: 15px;
+
+    color: #94A3B8;
+
+    font-size: 15px;
+}
+
+.search-box input {
+    width: 100%;
+
+    padding: 12px 15px 12px 42px;
+
+    border: 1px solid #CBD5E1;
+
+    border-radius: 9px;
+
+    outline: none;
+
+    font-size: 14px;
+
+    color: #334155;
+}
+
+.search-box input:focus {
+    border-color: #2563EB;
+
+    box-shadow:
+        0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+
+
+/* Filter */
+
+.status-filter {
+    min-width: 170px;
+
+    padding: 12px 15px;
+
+    border: 1px solid #CBD5E1;
+
+    border-radius: 9px;
+
+    outline: none;
+
+    background: #fff;
+
+    color: #334155;
+
+    font-size: 14px;
+
+    cursor: pointer;
+}
+
+.status-filter:focus {
+    border-color: #2563EB;
+}
+
+
+/* =========================================
+        APPLICATION CARD
+========================================= */
+
+.application-card {
+    background: #fff;
+
+    border-radius: 17px;
+
+    border: 1px solid #E5E7EB;
+
+    box-shadow:
+        0 4px 15px rgba(0, 0, 0, 0.05);
+
+    overflow: hidden;
+}
+
+
+/* =========================================
+        TABLE HEADER
+========================================= */
+
+.table-header {
+    padding: 22px 25px;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    border-bottom: 1px solid #E5E7EB;
+}
+
+.table-header h3 {
+    color: #1E293B;
+
+    font-size: 19px;
+
+    font-weight: 600;
+}
+
+.table-header p {
+    color: #64748B;
+
+    font-size: 13px;
+
+    margin-top: 3px;
+}
+
+.application-count {
+    background: #EAF2FF;
+
+    color: #2563EB;
+
+    padding: 7px 13px;
+
+    border-radius: 20px;
+
+    font-size: 12px;
+
+    font-weight: 600;
+}
+
+
+/* =========================================
+        TABLE
+========================================= */
+
+.table-container {
+    width: 100%;
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+thead {
+    background: #F8FAFC;
+}
+
+th {
+    padding: 15px 18px;
+
+    text-align: left;
+
+    color: #64748B;
+
+    font-size: 12px;
+
+    font-weight: 600;
+
+    white-space: nowrap;
+
+    border-bottom: 1px solid #E2E8F0;
+}
+
+td {
+    padding: 17px 18px;
+
+    border-bottom: 1px solid #F1F5F9;
+
+    color: #334155;
+
+    font-size: 13px;
+
+    white-space: nowrap;
+}
+
+tbody tr {
+    transition: 0.2s;
+}
+
+tbody tr:hover {
+    background: #F8FAFC;
+}
+
+tbody tr:last-child td {
+    border-bottom: none;
+}
+
+
+/* =========================================
+        SERIAL
+========================================= */
+
+.serial {
+    width: 28px;
+    height: 28px;
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    background: #F1F5F9;
+
+    color: #475569;
+
+    border-radius: 8px;
+
+    font-size: 12px;
+
+    font-weight: 600;
+}
+
+
+/* =========================================
+        COMPANY
+========================================= */
+
+.company-info {
+    display: flex;
+
+    align-items: center;
+
+    gap: 11px;
+}
+
+.company-icon {
+    width: 40px;
+    height: 40px;
+
+    border-radius: 10px;
+
+    background: #EAF2FF;
+
+    color: #2563EB;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    font-size: 17px;
+}
+
+.company-info strong {
+    display: block;
+
+    color: #1E293B;
+
+    font-size: 13px;
+
+    font-weight: 600;
+}
+
+.company-info small {
+    display: block;
+
+    color: #94A3B8;
+
+    font-size: 10px;
+
+    margin-top: 2px;
+}
+
+
+/* =========================================
+        ROLE
+========================================= */
+
+.role-text {
+    color: #334155;
+
+    font-weight: 500;
+}
+
+
+/* =========================================
+        DATE
+========================================= */
+
+.date-info {
+    display: flex;
+
+    align-items: center;
+
+    gap: 7px;
+
+    color: #64748B;
+}
+
+.date-info svg {
+    color: #2563EB;
+}
+
+
+/* =========================================
+        ROUND
+========================================= */
+
+.round-badge {
+    display: inline-block;
+
+    padding: 6px 11px;
+
+    border-radius: 20px;
+
+    background: #F1F5F9;
+
+    color: #475569;
+
+    font-size: 11px;
+
+    font-weight: 600;
+}
+
+
+/* =========================================
+        STATUS
+========================================= */
+
+.application-status {
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 6px;
+
+    padding: 7px 12px;
+
+    border-radius: 20px;
+
+    font-size: 11px;
+
+    font-weight: 600;
+}
+
+
+/* Pending */
+
+.application-status.pending {
+    background: #FFF7E6;
+
+    color: #B45309;
+}
+
+
+/* Interview */
+
+.application-status.interview {
+    background: #F3E8FF;
+
+    color: #7C3AED;
+}
+
+
+/* Selected */
+
+.application-status.selected {
+    background: #DCFCE7;
+
+    color: #15803D;
+}
+
+
+/* Rejected */
+
+.application-status.rejected {
+    background: #FEE2E2;
+
+    color: #DC2626;
+}
+
+
+/* =========================================
+        VIEW BUTTON
+========================================= */
+
+.view-btn {
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 7px;
+
+    border: none;
+
+    background: #EAF2FF;
+
+    color: #2563EB;
+
+    padding: 8px 13px;
+
+    border-radius: 8px;
+
+    font-size: 12px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.view-btn:hover {
+    background: #2563EB;
+
+    color: #fff;
+
+    transform: translateY(-1px);
+}
+
+
+/* =========================================
+        EMPTY
+========================================= */
+
+.empty-row {
+    height: 180px;
+
+    text-align: center;
+
+    color: #94A3B8;
+
+    font-size: 14px;
+}
+
+.empty-row svg {
+    display: block;
+
+    margin: 0 auto 10px;
+
+    font-size: 30px;
+
+    color: #CBD5E1;
+}
+
+
+/* =========================================
+        RESPONSIVE
+========================================= */
+
+@media (max-width: 1200px) {
+
+    .application-summary {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+
+@media (max-width: 900px) {
+
+    .track-application {
+        padding: 20px;
+    }
+
+    .application-toolbar {
+        flex-direction: column;
+    }
+
+    .search-box {
+        width: 100%;
+    }
+
+    .status-filter {
+        width: 100%;
+    }
+
+}
+
+
+@media (max-width: 700px) {
+
+    .application-header {
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 15px;
+    }
+
+    .back-btn {
+        width: 100%;
+
+        justify-content: center;
+    }
+
+    .application-summary {
+        grid-template-columns: 1fr;
+    }
+
+    .table-header {
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 10px;
+    }
+
+}
+
+
+@media (max-width: 500px) {
+
+    .track-application {
+        padding: 15px;
+    }
+
+    .application-header h2 {
+        font-size: 24px;
+    }
+
+    .application-header p {
+        font-size: 13px;
+    }
+
+    .summary-card {
+        padding: 16px;
+    }
+
+}

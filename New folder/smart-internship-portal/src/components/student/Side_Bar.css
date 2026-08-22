@@ -1,0 +1,189 @@
+/* SIDEBAR CONTAINER */
+.student-sidebar {
+  width: 100%;
+  height: 100vh;
+  background: #0f172a;
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow: hidden;
+  z-index: 1000;
+  box-shadow: 4px 0 18px rgba(0, 0, 0, 0.15);
+  font-family: "Poppins", sans-serif;
+}
+
+/* LOGO SECTION */
+.student-sidebar-logo {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 22px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  flex-shrink: 0;
+}
+
+.student-logo-icon {
+  font-size: 34px;
+  color: #3b82f6;
+  min-width: 34px;
+  flex-shrink: 0;
+}
+
+.student-logo-text {
+  white-space: nowrap;
+}
+
+.student-logo-text h2 {
+  font-size: 26px;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.student-logo-text p {
+  font-size: 12px;
+  color: #cbd5e1;
+  letter-spacing: 0.5px;
+}
+
+/* STUDENT PANEL TITLE */
+.student-sidebar-title {
+  height: 66px; 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #94a3b8;
+  font-size: 15px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  padding: 18px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+/* MENU AREA */
+.student-sidebar-menu {
+  flex: 1;
+  padding: 18px 12px;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.student-sidebar-menu ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* MENU ITEM */
+.student-menu-item {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start; /* THIS FORCES THE TEXT NEXT TO THE ICON */
+  gap: 16px;
+  width: 100%;
+  padding: 15px 18px;
+  margin-bottom: 10px;
+  border-radius: 12px;
+  color: #e2e8f0;
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 500;
+  white-space: nowrap;
+  transition: background 0.3s ease, color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.student-menu-item svg {
+  min-width: 20px;
+  flex-shrink: 0;
+}
+
+.student-menu-item:hover {
+  background: #2563eb;
+  color: #ffffff;
+  transform: translateX(4px);
+}
+
+.student-menu-item.active {
+  background: #2563eb;
+  color: #ffffff;
+  box-shadow: 0 8px 18px rgba(37, 99, 235, 0.35);
+}
+
+/* SIDEBAR FOOTER */
+.student-sidebar-footer {
+  padding: 18px;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  flex-shrink: 0;
+}
+
+.student-logout-btn {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start; /* TEXT NEXT TO ICON FOR LOGOUT TOO */
+  gap: 14px;
+  width: 100%;
+  padding: 15px;
+  border: none;
+  border-radius: 12px;
+  background: #ef4444;
+  color: #ffffff;
+  font-family: inherit;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.student-logout-btn:hover {
+  background: #dc2626;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 18px rgba(239, 68, 68, 0.3);
+}
+
+/* --- COLLAPSED STATE --- */
+.student-sidebar.collapsed .student-sidebar-logo {
+  justify-content: center;
+  padding: 22px 0;
+}
+
+.student-sidebar.collapsed .student-sidebar-menu {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.student-sidebar.collapsed .student-menu-item {
+  justify-content: center;
+  padding: 16px 0;
+}
+
+.student-sidebar.collapsed .student-menu-item:hover {
+  transform: none;
+}
+
+.student-sidebar.collapsed .student-logout-btn {
+  justify-content: center;
+  padding: 15px 0;
+}
+
+.student-sidebar.collapsed .student-sidebar-footer {
+  padding: 18px 10px;
+}
+
+/* SCROLLBAR */
+.student-sidebar-menu::-webkit-scrollbar {
+  width: 5px;
+}
+.student-sidebar-menu::-webkit-scrollbar-track {
+  background: transparent;
+}
+.student-sidebar-menu::-webkit-scrollbar-thumb {
+  background: #334155;
+  border-radius: 10px;
+}
+.student-sidebar-menu::-webkit-scrollbar-thumb:hover {
+  background: #475569;
+}

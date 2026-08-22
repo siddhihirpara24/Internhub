@@ -1,0 +1,126 @@
+/* src/pages/auth/FacultyLogin.css */
+.auth-page-container {
+  min-height: calc(100vh - 80px); /* Centers the card on the page */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #F4F6F8; /* Subtle gray background like Home page sections */
+  padding: 40px 20px;
+  font-family: sans-serif;
+}
+
+.auth-card {
+  background-color: #FFFFFF;
+  width: 100%;
+  max-width: 450px;
+  border-radius: 4px; /* Sharp professional corners */
+  border-top: 5px solid #005CB9; /* Royal blue accent line */
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  padding: 48px 40px;
+}
+
+.auth-header {
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+.auth-icon-wrapper {
+  width: 72px;
+  height: 72px;
+  background-color: #002B5C; /* Navy */
+  color: #FFFFFF;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 32px;
+  margin: 0 auto 16px;
+}
+
+.auth-header h2 {
+  font-size: 28px;
+  font-weight: 700;
+  color: #002B5C; /* Navy */
+  margin-bottom: 8px;
+}
+
+.auth-header p {
+  font-size: 15px;
+  color: #666666;
+}
+
+.auth-form {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.auth-form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.auth-form-group label {
+  font-size: 14px;
+  font-weight: 700;
+  color: #333333;
+}
+
+.input-with-icon {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.input-icon {
+  position: absolute;
+  left: 16px;
+  color: #666666;
+  font-size: 16px;
+}
+
+.input-with-icon input {
+  width: 100%;
+  padding: 14px 16px 14px 44px; /* Left padding makes room for icon */
+  border: 1px solid #CBD5E1;
+  border-radius: 4px;
+  font-size: 15px;
+  color: #333333;
+  background-color: #F8FAFC;
+  font-family: inherit;
+  transition: all 0.2s ease;
+  box-sizing: border-box;
+}
+
+.input-with-icon input:focus {
+  outline: none;
+  border-color: #005CB9;
+  background-color: #FFFFFF;
+  box-shadow: 0 0 0 3px rgba(0, 92, 185, 0.1); /* Subtle blue glow */
+}
+
+.btn-auth-submit {
+  background-color: #005CB9; /* Royal blue */
+  color: #FFFFFF;
+  border: none;
+  border-radius: 4px;
+  padding: 16px;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: 0.2s;
+  text-transform: uppercase;
+  margin-top: 8px;
+  width: 100%;
+}
+
+.btn-auth-submit:hover {
+  background-color: #00458C; /* Darker blue on hover */
+}
+
+@media (max-width: 640px) {
+  .auth-card {
+    padding: 32px 24px;
+  }
+}

@@ -1,0 +1,288 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+:root {
+  --ec-primary-blue: #2563EB;
+  --ec-dark-blue: #1D4ED8;
+  --ec-heading-blue: #1E40AF;
+  --ec-page-bg: #F4F7FC;
+  --ec-card-bg: #FFFFFF;
+  --ec-text-main: #334155;
+  --ec-text-secondary: #64748B;
+  --ec-border: #CBD5E1;
+  --ec-input-bg: #F8FAFC;
+}
+
+.edit-company-page {
+  font-family: 'Poppins', sans-serif;
+  padding: 24px;
+  background-color: var(--ec-page-bg);
+  min-height: 100vh;
+  color: var(--ec-text-main);
+}
+
+.ec-flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 60vh;
+}
+
+.ec-loading-text {
+  color: var(--ec-text-secondary);
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+
+/* Page Header */
+.ec-page-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.ec-page-title {
+  color: var(--ec-heading-blue);
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin: 0 0 4px 0;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.ec-page-subtitle {
+  color: var(--ec-text-secondary);
+  font-size: 0.9rem;
+  margin: 0;
+}
+
+.ec-btn-back {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background-color: transparent;
+  color: var(--ec-text-secondary);
+  border: 1px solid var(--ec-border);
+  padding: 8px 16px;
+  border-radius: 6px;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.ec-btn-back:hover {
+  background-color: var(--ec-card-bg);
+  color: var(--ec-text-main);
+}
+
+/* Form Container & Cards */
+.ec-form-container {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.section-card {
+  background-color: var(--ec-card-bg);
+  border-radius: 18px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.06);
+  padding: 24px;
+}
+
+.section-title {
+  color: var(--ec-primary-blue);
+  font-size: 1.15rem;
+  font-weight: 600;
+  margin-top: 0;
+  margin-bottom: 24px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid var(--ec-input-bg);
+}
+
+/* Grid & Inputs */
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.ec-col-span-full {
+  grid-column: 1 / -1;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.form-group label {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--ec-text-main);
+}
+
+.form-group label svg {
+  color: var(--ec-text-secondary);
+  font-size: 0.85rem;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  padding: 12px 14px;
+  border: 1px solid var(--ec-border);
+  border-radius: 10px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.95rem;
+  background-color: var(--ec-input-bg);
+  color: var(--ec-text-main);
+  transition: all 0.2s ease;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: var(--ec-primary-blue);
+  background-color: var(--ec-card-bg);
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.12);
+}
+
+/* Radio Buttons Design */
+.ec-rounds-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+.ec-round-box {
+  background-color: var(--ec-input-bg);
+  border: 1px solid var(--ec-border);
+  border-radius: 12px;
+  padding: 16px;
+}
+
+.ec-round-title {
+  margin: 0 0 12px 0;
+  font-size: 1rem;
+  color: var(--ec-heading-blue);
+  font-weight: 600;
+}
+
+.ec-radio-group {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.ec-radio-label {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 14px;
+  border: 1px solid var(--ec-border);
+  border-radius: 8px;
+  cursor: pointer;
+  background-color: var(--ec-card-bg);
+  transition: all 0.2s ease;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.ec-radio-label:hover {
+  border-color: var(--ec-primary-blue);
+}
+
+.ec-radio-label.selected {
+  border-color: var(--ec-primary-blue);
+  background-color: #EFF6FF;
+  color: var(--ec-primary-blue);
+}
+
+.ec-radio-label input[type="radio"] {
+  accent-color: var(--ec-primary-blue);
+  width: 16px;
+  height: 16px;
+  margin: 0;
+  cursor: pointer;
+}
+
+/* Buttons */
+.ec-form-actions {
+  display: flex;
+  gap: 16px;
+  margin-top: 10px;
+}
+
+.ec-btn-submit {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background-color: var(--ec-primary-blue);
+  color: white;
+  border: none;
+  padding: 12px 28px;
+  border-radius: 10px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.ec-btn-submit:hover {
+  background-color: var(--ec-dark-blue);
+}
+
+.ec-btn-cancel {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background-color: #F1F5F9;
+  color: var(--ec-text-main);
+  border: none;
+  padding: 12px 28px;
+  border-radius: 10px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.ec-btn-cancel:hover {
+  background-color: #E2E8F0;
+}
+
+/* Responsive Layout */
+@media (max-width: 768px) {
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .ec-page-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+  }
+  
+  .ec-form-actions {
+    flex-direction: column;
+  }
+  
+  .ec-btn-submit, .ec-btn-cancel {
+    width: 100%;
+  }
+}

@@ -1,0 +1,21 @@
+/* Unique wrapper so it NEVER conflicts with the Faculty panel! */
+.student-layout-wrapper {
+  display: grid;
+  grid-template-columns: 260px 1fr;   /* sidebar width | content */
+  grid-template-rows: 70px 1fr;       /* header height | content */
+  height: 100vh;
+  transition: grid-template-columns .35s ease;
+}
+
+.student-layout-wrapper.collapsed {
+  grid-template-columns: 80px 1fr;    /* matches .sidebar.collapsed width */
+}
+
+/* Places your dashboard perfectly below the header and next to the sidebar */
+.student-content-area {
+  grid-column: 2;
+  grid-row: 2;
+  overflow-y: auto;
+  height: 100%;
+  padding-bottom: 20px; /* Gives a little breathing room at the bottom */
+}
