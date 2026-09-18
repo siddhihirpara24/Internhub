@@ -8,7 +8,6 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @AllArgsConstructor
 public class AcademicDetailsResponse {
-	
     private String fullName;
     private String email;
     private String enrollmentNumber;
@@ -26,4 +25,7 @@ public class AcademicDetailsResponse {
     
     private String resumeUrl;
     private String photoUrl;
+    
+    private String skill1;
+    private String skill2;
 }

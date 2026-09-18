@@ -214,4 +214,12 @@ public class OptOutRequestService {
         }
         optOutRequestRepository.deleteById(id);
     }
+    
+    public boolean hasOptedOut(String email) {
+        Registration registration = registrationRepository.findByEmail(email).orElse(null);
+        if (registration == null) {
+            return false;
+        }
+        return optOutRequestRepository.existsByRegistrationId(registration.getId());
+    }
 }

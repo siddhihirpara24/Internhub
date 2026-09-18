@@ -38,16 +38,33 @@ public class AcademicService {
                 .orElse(new AcademicDetails());
 
         details.setEmail(email);
-        details.setDepartment(request.getDepartment());
-        details.setSemester(request.getSemester());
-        details.setMobileNumber(request.getMobileNumber());
-        details.setGender(request.getGender());
-        details.setDivision(request.getDivision());
-        details.setCgpaSem1(request.getCgpaSem1());
-        details.setCgpaSem2(request.getCgpaSem2());
-        details.setBacklog(request.getBacklog());
-        details.setHometown(request.getHometown());
-        details.setAddress(request.getAddress());
+        details.setEnrollmentNumber(user.getEnrollmentNumber());
+        
+        if (request.getDepartment() != null) details.setDepartment(request.getDepartment());
+        if (request.getSemester() != null) details.setSemester(request.getSemester());
+        if (request.getMobileNumber() != null) details.setMobileNumber(request.getMobileNumber());
+        if (request.getGender() != null) details.setGender(request.getGender());
+        if (request.getDivision() != null) details.setDivision(request.getDivision());
+        if (request.getCgpaSem1() != null) details.setCgpaSem1(request.getCgpaSem1());
+        if (request.getCgpaSem2() != null) details.setCgpaSem2(request.getCgpaSem2());
+        if (request.getBacklog() != null) details.setBacklog(request.getBacklog());
+        if (request.getHometown() != null) details.setHometown(request.getHometown());
+        if (request.getAddress() != null) details.setAddress(request.getAddress());
+        if (request.getSkill1() != null) details.setSkill1(request.getSkill1());
+        if (request.getSkill2() != null) details.setSkill2(request.getSkill2());
+
+//        details.setDepartment(request.getDepartment());
+//        details.setSemester(request.getSemester());
+//        details.setMobileNumber(request.getMobileNumber());
+//        details.setGender(request.getGender());
+//        details.setDivision(request.getDivision());
+//        details.setCgpaSem1(request.getCgpaSem1());
+//        details.setCgpaSem2(request.getCgpaSem2());
+//        details.setBacklog(request.getBacklog());
+//        details.setHometown(request.getHometown());
+//        details.setAddress(request.getAddress());
+//        details.setSkill1(request.getSkill1());
+//        details.setSkill2(request.getSkill2());
 
         academicDetailsRepository.save(details);
 
@@ -71,7 +88,8 @@ public class AcademicService {
                 d.getHometown(),
                 d.getAddress(),
                 percentage,
-                d.getResumePath(), d.getPhotoPath()
+                d.getResumePath(), d.getPhotoPath(),
+                d.getSkill1(), d.getSkill2()
         );
     }
 
@@ -105,6 +123,7 @@ public class AcademicService {
         AcademicDetails details = academicDetailsRepository.findByEmail(email)
                 .orElse(new AcademicDetails());
         details.setEmail(email);
+        details.setEnrollmentNumber(user.getEnrollmentNumber()); // ADD THIS LINE
 
         String uploadDir = "uploads/" + folder + "/";
         Files.createDirectories(Paths.get(uploadDir));
@@ -131,6 +150,12 @@ public class AcademicService {
         AcademicDetails details = academicDetailsRepository.findByEmail(email)
                 .orElse(new AcademicDetails());
 
-        return new ProfileResponse(user.getName(), details.getPhotoPath());
+        return new ProfileResponse(
+                user.getName(),
+                user.getEmail(),
+                user.getMobileNumber(),
+                user.getEnrollmentNumber(),
+                details.getPhotoPath()
+        );
     }
 }

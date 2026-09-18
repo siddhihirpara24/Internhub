@@ -5,6 +5,9 @@ import com.example.service.AcademicService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.Authentication;
 import org.springframework.web.bind.annotation.*;
+import com.example.service.ApplicationService;
+import com.example.entity.Application;
+import java.util.List;
 
 import org.springframework.web.multipart.MultipartFile; 
 import java.io.IOException;
@@ -16,6 +19,19 @@ public class StudentController {
 
     @Autowired
     private AcademicService academicService;
+    
+    @Autowired
+    private ApplicationService applicationService;
+
+    @PostMapping("/apply")
+    public String apply(Authentication authentication, @RequestBody ApplyRequest request) {
+        return applicationService.apply(authentication.getName(), request);
+    }
+
+    @GetMapping("/applications")
+    public List<Application> getApplications(Authentication authentication) {
+        return applicationService.getMyApplications(authentication.getName());
+    }
 
     @GetMapping("/academic")
     public AcademicDetailsResponse getAcademic(Authentication authentication) {
@@ -46,4 +62,6 @@ public class StudentController {
     public ProfileResponse getProfile(Authentication authentication) {
         return academicService.getProfile(authentication.getName());
     }
+    
+
 }

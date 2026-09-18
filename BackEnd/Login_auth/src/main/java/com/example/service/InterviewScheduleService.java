@@ -8,16 +8,24 @@ import com.example.repository.InterviewScheduleRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import com.example.repository.ApplicationRepository;
+
 import java.util.List;
 
 @Service
 public class InterviewScheduleService {
 
+	@Autowired 
+	private ApplicationRepository applicationRepository;
+	
     @Autowired
     private InterviewScheduleRepository scheduleRepository;
 
     @Autowired
     private CompanyRepository companyRepository;
+    
+    @Autowired
+    private NotificationService notificationService;   // ← new field
 
     public InterviewSchedule addSchedule(InterviewScheduleDto dto) {
         // 1. Fetch the full company entity from database using the companyId sent by React
@@ -33,9 +41,46 @@ public class InterviewScheduleService {
         schedule.setDuration(dto.getDuration());
         schedule.setInterviewMode(dto.getInterviewMode());
         schedule.setVenue(dto.getVenue());
+        
+        InterviewSchedule saved = scheduleRepository.save(schedule);
+        try
+        {
+        	// ← new: notify only students who applied to this company
+        	String title = "Interview Scheduled — " + company.getCompanyName();
+        	String message = String.format(
+        			"A %s round interview has been scheduled on %s at %s (%s). Venue: %s. Duration: %s.",
+        			dto.getInterviewRound(), dto.getInterviewDate(), dto.getInterviewTime(),
+        			dto.getInterviewMode(), dto.getVenue(), dto.getDuration()
+        			);
+        	 int applicantCount =
+                     applicationRepository
+                             .findByCompanyIgnoreCase(company.getCompanyName())
+                             .size();
 
+             System.out.println(
+                     "Interview scheduled for '"
+                             + company.getCompanyName()
+                             + "' — notifying "
+                             + applicantCount
+                             + " applicant(s)."
+             );
+             
+             notificationService.notifyApplicantsOfCompany(company.getCompanyName(), "Interview", title, message);
+        } catch (Exception ex) {
+
+            System.err.println(
+                    "Failed to create notifications for company '"
+                            + company.getCompanyName()
+                            + "': "
+                            + ex.getMessage()
+            );
+
+            ex.printStackTrace();
+        }
+
+        return saved;
         // 3. Save to database
-        return scheduleRepository.save(schedule);
+//        return scheduleRepository.save(schedule);
     }
 
     // Needed for your React Table to fetch all schedules

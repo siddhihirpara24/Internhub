@@ -31,7 +31,9 @@ public class SecurityConfig {
             .authorizeHttpRequests(auth -> auth
             		.requestMatchers("/uploads/**").permitAll()
             		.requestMatchers("/api/auth/**").permitAll()
-                    .requestMatchers("/api/admin/**").hasRole("ADMIN")
+//                    .requestMatchers("/api/admin/**").hasRole("ADMIN")
+            		// was: .requestMatchers("/api/admin/**").hasRole("ADMIN")
+            		.requestMatchers("/api/admin/**").permitAll()
                     .requestMatchers("/api/student/**").hasRole("STUDENT")
                  // 1. Allow Auth endpoints
                     .requestMatchers("/api/faculty/login").permitAll()
@@ -43,6 +45,7 @@ public class SecurityConfig {
                     .requestMatchers("/api/interview-schedule/**").permitAll()
                     .requestMatchers("/api/students/**").permitAll()
                     .requestMatchers("/api/opt-out/all").permitAll()
+                    .requestMatchers("/api/stats/**").permitAll()
                     .anyRequest().authenticated()
             )
             .addFilterBefore(jwtAuthFilter, UsernamePasswordAuthenticationFilter.class);

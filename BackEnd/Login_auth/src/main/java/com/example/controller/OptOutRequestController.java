@@ -68,6 +68,18 @@ public class OptOutRequestController {
         }
     }
     
+    @GetMapping("/check")
+    public ResponseEntity<?> checkOptOutStatus(Authentication authentication) {
+        try {
+            String email = authentication.getName();
+            boolean optedOut = optOutRequestService.hasOptedOut(email);
+            return ResponseEntity.ok(java.util.Map.of("optedOut", optedOut));
+        } catch (RuntimeException e) {
+            return ResponseEntity.badRequest().body(e.getMessage());
+        }
+    }
+    
+    
     @org.springframework.web.bind.annotation.DeleteMapping("/{id}")
     public ResponseEntity<?> deleteOptOutRequest(@PathVariable Long id) {
         try {

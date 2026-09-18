@@ -12,22 +12,32 @@ public class AcademicDetails {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
+    @Column(name = "enrollment_number")
+    private String enrollmentNumber;
+    
     @Column(unique = true, nullable = false)
     private String email;
-
-    private String department;
-    private String semester;
+    
+  
     private String mobileNumber;
-    private String gender;
-    private String division;
-
+    private String department;
+    
     @Column(name = "cgpa_sem1")
     private String cgpaSem1;
 
     @Column(name = "cgpa_sem2")
     private String cgpaSem2;
-
+    
+    private String semester;
     private String backlog;
+    private String gender;
+    private String division;
+    private String skill1;
+    private String skill2;
+
+    
+
+    
     private String hometown;
     private String address;
     
@@ -36,4 +46,6 @@ public class AcademicDetails {
 
     @Column(name = "photo_path")
     private String photoPath;
+    
+    
 }

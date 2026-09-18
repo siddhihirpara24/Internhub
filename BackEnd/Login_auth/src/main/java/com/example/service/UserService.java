@@ -17,6 +17,9 @@ import java.util.Random;
 public class UserService {
 	
 	@Autowired
+	private AcademicDetailsRepository academicDetailsRepository;
+	
+	@Autowired
 	private LoginHistoryRepository loginHistoryRepository;
 	
 	@Autowired
@@ -173,5 +176,7 @@ public class UserService {
         emailService.sendOtpEmail(email, otp);
         return "OTP_SENT";
     }
+    
+   
 
 }

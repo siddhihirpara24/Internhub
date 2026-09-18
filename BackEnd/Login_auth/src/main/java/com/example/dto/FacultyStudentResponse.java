@@ -18,6 +18,9 @@ public class FacultyStudentResponse {
     private String address;
     private String photoPath;
     private String resumePath;
+    
+    private String skill1;
+    private String skill2;
 
     // Default Constructor
     public FacultyStudentResponse() {
@@ -153,5 +156,21 @@ public class FacultyStudentResponse {
 
     public void setResumePath(String resumePath) {
         this.resumePath = resumePath;
+    }
+    
+    public String getSkill1() {
+        return skill1;
+    }
+
+    public void setSkill1(String skill1) {
+        this.skill1 = skill1;
+    }
+
+    public String getSkill2() {
+        return skill2;
+    }
+
+    public void setSkill2(String skill2) {
+        this.skill2 = skill2;
     }
 }

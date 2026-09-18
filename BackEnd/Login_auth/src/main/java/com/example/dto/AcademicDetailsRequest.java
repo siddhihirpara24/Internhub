@@ -14,4 +14,7 @@ public class AcademicDetailsRequest {
     private String backlog;
     private String hometown;
     private String address;
+    
+    private String skill1;
+    private String skill2;
 }

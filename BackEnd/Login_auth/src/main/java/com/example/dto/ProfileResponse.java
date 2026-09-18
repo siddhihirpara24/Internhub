@@ -9,5 +9,8 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 public class ProfileResponse {
     private String name;
+    private String email;
+    private String mobileNumber;
+    private String enrollmentNumber;
     private String photoUrl;
 }
